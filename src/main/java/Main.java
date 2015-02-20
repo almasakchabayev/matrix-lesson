@@ -14,10 +14,11 @@ public class Main {
             if(matrix_a.length == matrix_b[0].length) {
                 for (int i=0; i<matrix_a.length; i++) {
                     for (int j=0; j<matrix_b[0].length; j++) {
-                        matrix_c[i][j] += matrix_a[i][j]*matrix_b[j][i];
-                        System.out.println("i " + i + "j "+ j + " " + matrix_c[i][j]);
+                        for (int k=0; k<matrix_b.length; k++) {
+                            matrix_c[i][j] += matrix_a[i][k]*matrix_b[k][i];
+                            System.out.println("i " + i + "j "+ j + " " + matrix_c[i][j]);
+                        }
                     }
-                    break;
                 }
             }
 
